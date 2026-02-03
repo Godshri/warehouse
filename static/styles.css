@@ -1,0 +1,9 @@
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+#qr-reader {
+  border: 1px dashed #cbd5e1;
+  padding: 8px;
+  border-radius: 8px;
+}
