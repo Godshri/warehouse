@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Отчеты — Умный склад{% endblock %}
+
+{% block body_attrs %}data-page="reports" data-required-role="manager"{% endblock %}
+
+{% block breadcrumbs %}
+  <nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Главная</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Отчеты</li>
+    </ol>
+  </nav>
+{% endblock %}
+
+{% block content %}
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Отчеты и статистика</h5>
+      <div class="d-flex gap-2 flex-wrap mb-2">
+        <button class="btn btn-sm btn-outline-secondary" id="load-stats">Загрузить статистику</button>
+        <button class="btn btn-sm btn-outline-secondary" id="download-report-csv">CSV отчет</button>
+        <button class="btn btn-sm btn-outline-secondary" id="download-report-xlsx">XLSX отчет</button>
+      </div>
+      <canvas id="stats-chart" height="120"></canvas>
+    </div>
+  </div>
+{% endblock %}

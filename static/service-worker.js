@@ -1,8 +1,10 @@
-const CACHE_NAME = 'smart-warehouse-v1';
+const CACHE_NAME = 'smart-warehouse-v15';
 const STATIC_ASSETS = [
   '/',
-  '/static/styles.css',
-  '/static/app.js',
+  '/static/styles.css?v=14',
+  '/static/rt-theme.css?v=14',
+  '/static/rt-purple-theme.css?v=14',
+  '/static/app.js?v=14',
   '/static/manifest.json',
   '/static/icon.svg',
 ];

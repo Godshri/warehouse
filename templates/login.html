@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Вход — Умный склад{% endblock %}
+
+{% block body_attrs %}data-page="login" data-public="true"{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Вход</h5>
+          <form id="login-form-page" data-login-form method="post" action="/login/">
+            {% csrf_token %}
+            <div class="mb-2">
+              <input class="form-control" name="username" placeholder="Логин" required>
+            </div>
+            <div class="mb-2">
+              <div class="input-group">
+                <input class="form-control" type="password" name="password" placeholder="Пароль" required>
+                <button class="btn btn-outline-secondary" type="button" data-toggle="password">
+                  <span class="password-icon"><i class="fa-regular fa-eye-slash"></i></span>
+                </button>
+              </div>
+            </div>
+            <button class="btn btn-primary w-100" type="submit">Войти</button>
+          </form>
+          <div class="text-muted small mt-2" id="login-status">Требуется авторизация</div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

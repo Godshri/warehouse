@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Выдача — Умный склад{% endblock %}
+
+{% block body_attrs %}data-page="issue"{% endblock %}
+
+{% block breadcrumbs %}
+  <nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Главная</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Выдача</li>
+    </ol>
+  </nav>
+{% endblock %}
+
+{% block content %}
+  <div class="row g-3">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Выдача оборудования</h5>
+          <form id="issue-form">
+            <input class="form-control mb-2" name="equipment_id" placeholder="UUID оборудования" required>
+            <input class="form-control mb-2" name="target_user_id" placeholder="ID получателя" required>
+            <input class="form-control mb-2" type="datetime-local" name="due_at" placeholder="Срок возврата">
+            <input class="form-control mb-2" name="notes" placeholder="Комментарий">
+            <button class="btn btn-success w-100" type="submit">Выдать</button>
+          </form>
+          <div class="small mt-2" id="issue-result"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Сканирование QR</h5>
+          <div id="qr-reader" class="mb-2"></div>
+          <input class="form-control mb-2" id="manual-qr" placeholder="Вставьте QR/UUID вручную">
+          <button class="btn btn-outline-primary w-100" id="scan-button">Найти оборудование</button>
+          <div class="mt-2 small" id="scan-result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

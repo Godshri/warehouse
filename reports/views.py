@@ -9,11 +9,11 @@ from rest_framework.views import APIView
 from openpyxl import Workbook
 
 from operations.models import Operation
-from users.permissions import IsObserverOrAbove
+from users.permissions import IsStorekeeperOrAdmin
 
 
 class StatsView(APIView):
-    permission_classes = [IsObserverOrAbove]
+    permission_classes = [IsStorekeeperOrAdmin]
 
     def get(self, request):
         total_ops = Operation.objects.count()
@@ -26,7 +26,7 @@ class StatsView(APIView):
 
 
 class ReportView(APIView):
-    permission_classes = [IsObserverOrAbove]
+    permission_classes = [IsStorekeeperOrAdmin]
 
     def get(self, request):
         start = request.query_params.get('start')
@@ -38,15 +38,16 @@ class ReportView(APIView):
             qs = qs.filter(timestamp__lte=end)
         rows = []
         for op in qs:
+            action_label = op.get_action_type_display()
             rows.append({
-                'id': op.id,
-                'equipment_id': str(op.equipment_id),
-                'equipment_name': op.equipment.name,
-                'action_type': op.action_type,
-                'user': op.user.username,
-                'target_user': op.target_user.username if op.target_user else '',
-                'timestamp': op.timestamp.isoformat(),
-                'notes': op.notes,
+                'ID': op.id,
+                'ID оборудования': str(op.equipment_id),
+                'Наименование оборудования': op.equipment.name,
+                'Тип операции': action_label,
+                'Пользователь': op.user.username,
+                'Получатель': op.target_user.username if op.target_user else '',
+                'Дата и время': op.timestamp.isoformat(),
+                'Комментарий': op.notes,
             })
         export_format = request.query_params.get('format')
         if export_format == 'csv':
@@ -55,7 +56,8 @@ class ReportView(APIView):
             if rows:
                 writer.writeheader()
                 writer.writerows(rows)
-            response = HttpResponse(output.getvalue(), content_type='text/csv')
+            csv_text = '\ufeff' + output.getvalue()
+            response = HttpResponse(csv_text, content_type='text/csv; charset=utf-8')
             response['Content-Disposition'] = 'attachment; filename="report.csv"'
             return response
         if export_format == 'xlsx':

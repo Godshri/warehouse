@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Профиль — Умный склад{% endblock %}
+
+{% block body_attrs %}data-page="profile"{% endblock %}
+
+{% block breadcrumbs %}
+  <nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Главная</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Профиль</li>
+    </ol>
+  </nav>
+{% endblock %}
+
+{% block content %}
+  <div class="row g-3">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Мой профиль</h5>
+          <div id="profile-info" class="text-muted">Загрузка...</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Доступы</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Роль: <span id="profile-role">—</span></li>
+            <li class="list-group-item">Логин: <span id="profile-username">—</span></li>
+            <li class="list-group-item">Email: <span id="profile-email">—</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Уведомления — Умный склад{% endblock %}
+
+{% block body_attrs %}data-page="notifications"{% endblock %}
+
+{% block breadcrumbs %}
+  <nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Главная</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Уведомления</li>
+    </ol>
+  </nav>
+{% endblock %}
+
+{% block content %}
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Уведомления</h5>
+      <div class="d-flex gap-2 flex-wrap mb-2">
+        <button class="btn btn-sm btn-outline-secondary" id="load-notifications">Обновить</button>
+        <button class="btn btn-sm btn-outline-secondary" id="mark-notifications-read">Пометить прочитанными</button>
+        <button class="btn btn-sm btn-outline-secondary" id="load-overdue">Просрочки</button>
+      </div>
+      <ul class="list-group list-group-flush" id="notifications-list"></ul>
+      <div class="small mt-2" id="overdue-result"></div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,137 @@
+@import url("/static/rt-theme.css?v=14");
+
+:root {
+  --atmr-base-accent: #7700ff;
+  --atmr-base-status-01: #ff4f12;
+
+  --atmr-accent-1000: #000;
+  --atmr-accent-990: #180033;
+  --atmr-accent-950: #2a0059;
+  --atmr-accent-925: #33006e;
+  --atmr-accent-900: #3c0080;
+  --atmr-accent-800: #470099;
+  --atmr-accent-700: #5300b3;
+  --atmr-accent-600: #6500d9;
+  --atmr-accent-500: var(--atmr-base-accent);
+  --atmr-accent-400: #9233ff;
+  --atmr-accent-300: #a759ff;
+  --atmr-accent-200: #bb80ff;
+  --atmr-accent-100: #ddbfff;
+  --atmr-accent-50: #f1e6ff;
+  --atmr-accent-25: #f8f2ff;
+  --atmr-accent-10: #fbf7ff;
+  --atmr-accent-0: #fff;
+  --atmr-accent-default: var(--atmr-accent-500);
+  --atmr-accent-soft: var(--atmr-accent-400);
+  --atmr-accent-muted: var(--atmr-accent-200);
+  --atmr-accent-hover: var(--atmr-accent-600);
+  --atmr-accent-active: var(--atmr-accent-700);
+  --atmr-accent-on-accent: var(--atmr-accent-0);
+  --atmr-accent-container-default: rgba(119, 0, 255, 0.1);
+  --atmr-accent-container-soft: rgba(119, 0, 255, 0.05);
+  --atmr-accent-container-muted: rgba(119, 0, 255, 0.03);
+  --atmr-accent-container-hover: rgba(119, 0, 255, 0.2);
+  --atmr-accent-container-active: rgba(119, 0, 255, 0.3);
+  --atmr-accent-on-container: var(--atmr-accent-500);
+
+  --atmr-status-01-1000: #000;
+  --atmr-status-01-990: #331004;
+  --atmr-status-01-950: #591c06;
+  --atmr-status-01-925: #6e2208;
+  --atmr-status-01-900: #802809;
+  --atmr-status-01-800: #992f0b;
+  --atmr-status-01-700: #b3370d;
+  --atmr-status-01-600: #d9430f;
+  --atmr-status-01-500: var(--atmr-base-status-01);
+  --atmr-status-01-400: #ff7241;
+  --atmr-status-01-300: #ff8d65;
+  --atmr-status-01-200: #ffa789;
+  --atmr-status-01-100: #ffd3c4;
+  --atmr-status-01-50: #ffede7;
+  --atmr-status-01-25: #fff6f3;
+  --atmr-status-01-10: #fffaf8;
+  --atmr-status-01-0: #fff;
+  --atmr-status-01-default: var(--atmr-status-01-500);
+  --atmr-status-01-soft: var(--atmr-status-01-400);
+  --atmr-status-01-muted: var(--atmr-status-01-200);
+  --atmr-status-01-hover: var(--atmr-status-01-600);
+  --atmr-status-01-active: var(--atmr-status-01-700);
+  --atmr-status-01-on-status-01: var(--atmr-status-01-0);
+  --atmr-status-01-container-default: rgba(255, 79, 18, 0.1);
+  --atmr-status-01-container-soft: rgba(255, 79, 18, 0.05);
+  --atmr-status-01-container-muted: rgba(255, 79, 18, 0.03);
+  --atmr-status-01-container-hover: rgba(255, 79, 18, 0.2);
+  --atmr-status-01-container-active: rgba(255, 79, 18, 0.3);
+  --atmr-status-01-on-container: var(--atmr-status-01-500);
+
+  --atmr-focus-base-soft: rgba(119, 0, 255, 0.1);
+  --atmr-focus-base-contrast: rgba(119, 0, 255, 0.1);
+}
+
+[data-theme="dark"] {
+  --atmr-base-accent: #7700ff;
+  --atmr-base-status-01: #ff4f12;
+
+  --atmr-accent-1000: #000;
+  --atmr-accent-990: #180033;
+  --atmr-accent-950: #2a0059;
+  --atmr-accent-925: #33006e;
+  --atmr-accent-900: #3c0080;
+  --atmr-accent-800: #470099;
+  --atmr-accent-700: #5300b3;
+  --atmr-accent-600: #6500d9;
+  --atmr-accent-500: var(--atmr-base-accent);
+  --atmr-accent-400: #9233ff;
+  --atmr-accent-300: #a759ff;
+  --atmr-accent-200: #bb80ff;
+  --atmr-accent-100: #ddbfff;
+  --atmr-accent-50: #f1e6ff;
+  --atmr-accent-25: #f8f2ff;
+  --atmr-accent-10: #fbf7ff;
+  --atmr-accent-0: #fff;
+  --atmr-accent-default: var(--atmr-accent-200);
+  --atmr-accent-soft: var(--atmr-accent-300);
+  --atmr-accent-muted: var(--atmr-accent-400);
+  --atmr-accent-hover: var(--atmr-accent-100);
+  --atmr-accent-active: var(--atmr-accent-50);
+  --atmr-accent-on-accent: var(--atmr-accent-950);
+  --atmr-accent-container-default: rgba(146, 51, 255, 0.2);
+  --atmr-accent-container-soft: rgba(146, 51, 255, 0.1);
+  --atmr-accent-container-muted: rgba(146, 51, 255, 0.05);
+  --atmr-accent-container-hover: rgba(146, 51, 255, 0.3);
+  --atmr-accent-container-active: rgba(146, 51, 255, 0.4);
+  --atmr-accent-on-container: var(--atmr-accent-200);
+
+  --atmr-status-01-1000: #000;
+  --atmr-status-01-990: #331004;
+  --atmr-status-01-950: #591c06;
+  --atmr-status-01-925: #6e2208;
+  --atmr-status-01-900: #802809;
+  --atmr-status-01-800: #992f0b;
+  --atmr-status-01-700: #b3370d;
+  --atmr-status-01-600: #d9430f;
+  --atmr-status-01-500: var(--atmr-base-status-01);
+  --atmr-status-01-400: #ff7241;
+  --atmr-status-01-300: #ff8d65;
+  --atmr-status-01-200: #ffa789;
+  --atmr-status-01-100: #ffd3c4;
+  --atmr-status-01-50: #ffede7;
+  --atmr-status-01-25: #fff6f3;
+  --atmr-status-01-10: #fffaf8;
+  --atmr-status-01-0: #fff;
+  --atmr-status-01-default: var(--atmr-status-01-200);
+  --atmr-status-01-soft: var(--atmr-status-01-300);
+  --atmr-status-01-muted: var(--atmr-status-01-400);
+  --atmr-status-01-hover: var(--atmr-status-01-100);
+  --atmr-status-01-active: var(--atmr-status-01-50);
+  --atmr-status-01-on-status-01: var(--atmr-status-01-950);
+  --atmr-status-01-container-default: rgba(255, 114, 65, 0.2);
+  --atmr-status-01-container-soft: rgba(255, 114, 65, 0.1);
+  --atmr-status-01-container-muted: rgba(255, 114, 65, 0.05);
+  --atmr-status-01-container-hover: rgba(255, 114, 65, 0.3);
+  --atmr-status-01-container-active: rgba(255, 114, 65, 0.4);
+  --atmr-status-01-on-container: var(--atmr-status-01-200);
+
+  --atmr-focus-base-soft: rgba(146, 51, 255, 0.2);
+  --atmr-focus-base-contrast: rgba(146, 51, 255, 0.2);
+}

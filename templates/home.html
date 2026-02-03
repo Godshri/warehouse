@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Умный склад — Главная{% endblock %}
+
+{% block body_attrs %}data-page="home"{% endblock %}
+
+{% block content %}
+  <section class="hero-panel mb-4">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Умный склад</p>
+      <h1 class="hero-title">Учет, выдача и инвентаризация оборудования</h1>
+      <p class="hero-subtitle">
+        Быстрый доступ к карточкам оборудования, истории операций и отчетам.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/equipment/">Перейти к оборудованию</a>
+        <a class="btn btn-outline-primary" href="/inventory/" id="home-inventory">Начать инвентаризацию</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Статус авторизации</h5>
+          <p class="text-muted" id="login-status">Требуется авторизация</p>
+          <a class="btn btn-outline-primary" href="/profile/">Перейти в профиль</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2 class="section-title">Быстрые действия</h2>
+    <div class="grid-3">
+      <a class="btn btn-outline-primary" href="/equipment/">Каталог оборудования</a>
+      <a class="btn btn-outline-primary" href="/issue/">Выдача оборудования</a>
+      <a class="btn btn-outline-primary" href="/return/">Возврат оборудования</a>
+      <a class="btn btn-outline-primary" href="/inventory/" id="home-inventory">Инвентаризация</a>
+      <a class="btn btn-outline-primary" href="/reports/" id="home-reports">Отчеты и статистика</a>
+      <a class="btn btn-outline-primary" href="/notifications/">Уведомления</a>
+    </div>
+  </section>
+{% endblock %}
