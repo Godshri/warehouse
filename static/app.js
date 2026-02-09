@@ -65,8 +65,8 @@ function applyColorTheme(colorTheme) {
   const link = document.getElementById('theme-stylesheet');
   if (!link) return;
   const href = colorTheme === 'purple'
-    ? '/static/rt-purple-theme.css?v=14'
-    : '/static/rt-theme.css?v=14';
+    ? '/static/rt-purple-theme.css?v=18'
+    : '/static/rt-theme.css?v=18';
   link.setAttribute('href', href);
   const toggle = getEl('color-toggle');
   if (toggle) {

@@ -406,8 +406,8 @@
 
   --atmr-disappear-elevated-xl: rgba(255, 255, 255, 0);
 
-  --rt-primary: var(--atmr-accent-default);
-  --rt-primary-600: var(--atmr-accent-hover);
+  --rt-primary: var(--atmr-accent-400);
+  --rt-primary-600: var(--atmr-accent-500);
   --rt-primary-100: var(--atmr-accent-100);
   --rt-accent: var(--atmr-base-accent);
   --rt-bg: var(--atmr-bg-page-filled);
@@ -834,9 +834,9 @@
 
   --atmr-disappear-elevated-xl: rgba(69, 75, 89, 0);
 
-  --rt-primary: var(--atmr-accent-default);
-  --rt-primary-600: var(--atmr-accent-hover);
-  --rt-primary-100: var(--atmr-accent-100);
+  --rt-primary: var(--atmr-accent-300);
+  --rt-primary-600: var(--atmr-accent-200);
+  --rt-primary-100: var(--atmr-accent-400);
   --rt-accent: var(--atmr-base-accent);
   --rt-bg: var(--atmr-bg-page-filled);
   --rt-surface: var(--atmr-bg-surface1);

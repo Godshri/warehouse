@@ -346,8 +346,10 @@ body {
   font-size: var(--app-text-base);
 }
 
-main.container {
-  max-width: 1200px;
+main.container-fluid {
+  width: 100%;
+  padding-left: clamp(16px, 3vw, 40px);
+  padding-right: clamp(16px, 3vw, 40px);
 }
 
 h1,
